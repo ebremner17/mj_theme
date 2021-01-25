@@ -1,3 +1,6 @@
+const sass = require('gulp-sass');
+const sassGlobImporter = require('node-sass-glob-importer');
+
 var pkg = require('./package.json'),
   gulp = require('gulp'),
   glob = require('glob'),
@@ -7,12 +10,12 @@ var pkg = require('./package.json'),
 
 var config = {
   sass: './sass/**/*.{scss,sass}',
-  sassSrc: './sass/cuba_theme.scss',
+  sassSrc: './sass/mj.scss',
   sassIe: './sass/ie.scss',
   sassPrint: './sass/print.scss',
   css: './css',
   js:'./scripts',
-  jsSrc:'./js/cuba.js'
+  jsSrc:'./js/mj.js'
 };
 
 // Transpile, concatenate and minify scripts
@@ -28,12 +31,19 @@ function scripts() {
 function styles() {
   return gulp.src(config.sassSrc)
     .pipe(plugins.plumber())
+    .pipe(
+      sass({
+        includePaths: ['./node_modules/breakpoint-sass/stylesheets'],
+        precision: 10,
+        importer: sassGlobImporter()
+      })
+    )
     .pipe(plugins.sass({
       includePaths: require('node-bourbon').includePaths,
       outputStyle: 'collapsed'
     }))
     .pipe(minifyCSS())
-    .pipe(plugins.concat('cuba.css'))
+    .pipe(plugins.concat('mj.css'))
     .pipe(gulp.dest(config.css))
     .pipe(plugins.size({title:'css'}));
 }
