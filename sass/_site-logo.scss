@@ -1,0 +1,16 @@
+.mj-site-logo {
+  padding-left: 1rem;
+  width: 379px;
+
+  .mj-site-logo__link{
+    background: url('../images/mjvs-logo.png') 0 50% no-repeat;
+    background-size: contain;
+    color: #000000;
+    display: block;
+    height: 125px;
+
+    text-align:center;
+    text-indent: -999rem;
+    width: 100%;
+  }
+}

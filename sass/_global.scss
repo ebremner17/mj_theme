@@ -1,0 +1,12 @@
+body {
+  background-color: black;
+  font-family: 'Ubuntu', Georgia, "Times New Roman", Times, serif;
+}
+
+a, a.link {
+  border-bottom: none;
+
+  &:hover {
+    border-bottom-style: none;
+  }
+}

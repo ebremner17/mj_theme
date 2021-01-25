@@ -1,12 +1,23 @@
 <footer class="mj-footer" role="contentinfo">
-  <div class="mj-footer__info">
-    UW customizable news feed.
+  <div class="mj-footer__links">
+    <ul>
+      <li>
+        <a href="privacy-policy">
+          Privacy Policy
+        </a>
+      </li>
+      <li>
+        Return & Refund Policy
+      </li>
+      <li>
+        Shipping & Delivery Policy
+      </li>
+      <li>
+        Terms of Service
+      </li>
+    </ul>
   </div>
-  <div class="mj-footer__login">
-    {% if logged_in %}
-      <a href="{{ url('<front>') }}/user/logout">Logout</a>
-    {% else %}
-      <a href="{{ url('<front>') }}/user/login">Login</a>
-    {% endif %}
+  <div class="mj-footer__connect">
+    Connect with us
   </div>
 </footer>

@@ -1,0 +1,44 @@
+.mj-footer {
+  display: grid;
+  grid-template-columns: 100%;
+  color: white;
+  padding-top: 1rem;
+
+  ul {
+    list-style-type: none;
+    display: inline-block;
+
+    li {
+      display: inline-block;
+      padding: 0 1rem;
+    }
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @include xl {
+    grid-template-columns: 75% 25%;
+  }
+
+  &__links {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+  }
+
+  &__connect {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+
+    @include xl {
+      grid-row: 1 / 2;
+      grid-column: 2 / 3;
+    }
+  }
+}

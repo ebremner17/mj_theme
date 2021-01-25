@@ -1,0 +1,33 @@
+.mj {
+
+  display: grid;
+  grid-template-columns: 100%;
+
+  .mj-header {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  .mj-highlighted {
+    max-width: 63rem;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    padding: 1rem;
+    width: 100%;
+    @media screen and (min-width: 80em) {
+      padding: 0;
+    }
+  }
+
+  .mj-main {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    min-height: 60vh;
+    width: 100%;
+  }
+
+  .mj-footer {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+  }
+}
