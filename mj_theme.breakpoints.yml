@@ -1,0 +1,16 @@
+# Breakpoints - change based on site need
+mj_theme.xsmall:
+  label: Extra Small
+  mediaQuery: 'all and (min-width: 20em)'
+mj_theme.small:
+  label: Small
+  mediaQuery: 'all and (min-width: 30em)'
+mj_theme.medium:
+  label: Medium
+  mediaQuery: 'all and (min-width: 48em)'
+mj_theme.large:
+  label: Large
+  mediaQuery: 'all and (min-width: 64em)'
+mj_theme.xlarge:
+  label: Extra large
+  mediaQuery: 'all and (min-width: 80em)'

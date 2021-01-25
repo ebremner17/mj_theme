@@ -1,0 +1,15 @@
+name: Montgomery James
+type: theme
+description: Theme for Montgomery James.
+base theme: bartik
+core_version_requirement: ^9
+
+libraries:
+  - core/normalize
+  - mj_theme/global-styling
+
+regions:
+  header: Header
+  highlighted: Highlighted
+  content: Content  # the content region is required
+  footer: Footer
