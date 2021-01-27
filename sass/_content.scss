@@ -4,11 +4,17 @@
 
   &__wrapper {
     @include full-width;
-    padding: 0 1rem;
+  }
+}
 
-    @include large {
-      @include contained-width;
-      padding: 1rem 0;
-    }
+#block-mj-theme-tabs {
+  @include large {
+    @include contained-width;
+  }
+}
+
+.node-layout-builder-form {
+  @include large {
+    @include contained-width;
   }
 }

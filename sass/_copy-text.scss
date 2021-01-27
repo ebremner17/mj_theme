@@ -1,0 +1,15 @@
+.mj-copy-text {
+  display: block;
+  position: relative;
+
+  &__text {
+    padding: 1rem;
+    z-index: 2;
+  }
+
+  &__contained {
+    @include large {
+      @include contained-width;
+    }
+  }
+}
