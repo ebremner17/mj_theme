@@ -1,6 +1,13 @@
 <header class="mj-header" role="banner">
 
   <div class="mj-header__wrapper">
-    {% include '@mj_theme/components/site-logo.html.twig' %}
+    <div class="mj-header__logo">
+      {% include '@mj_theme/components/site-logo.html.twig' %}
+    </div>
+
+    <div class="mj-header__cart">
+      {{ drupal_block('commerce_cart') }}
+    </div>
+
   </div>
 </header>

@@ -1,0 +1,22 @@
+<div{{ attributes}}>
+  <div class="cart-block--summary">
+    <a class="cart-block--link__expand" href="{{ url }}">
+      <span class="cart-block--summary__icon">
+        <img src="/profiles/mj_profile/modules/contrib/commerce/icons/000000/cart.png" alt="Shopping cart" typeof="foaf:Image">
+      </span>
+      <span class="cart-block--summary__count">{{ count_text }}</span>
+    </a>
+  </div>
+  {% if content %}
+    <div class="cart-block--contents">
+      <div class="cart-block--contents__inner">
+        <div class="cart-block--contents__items">
+          {{ content }}
+        </div>
+        <div class="cart-block--contents__links">
+          <a href="/cart">View cart</a>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+</div>
